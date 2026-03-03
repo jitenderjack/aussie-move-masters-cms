@@ -1,7 +1,7 @@
 import { StoryblokClient } from '@storyblok/js';
 
 const storyblokApi = new StoryblokClient({
-  accessToken: process.env.NEXT_PUBLIC_STORYBLOK_ACCESS_TOKEN!,
+  accessToken: process.env.NEXT_PUBLIC_STORYBLOK_PREVIEW_TOKEN!,
 });
 
 export async function fetchStory(slug: string, version: 'draft' | 'published' = 'draft') {
