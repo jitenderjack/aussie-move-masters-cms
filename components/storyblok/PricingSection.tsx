@@ -1,6 +1,6 @@
 "use client";
 
-import { StoryblokComponent, storyblokEditable } from "@storyblok/react/rsc";
+import { StoryblokServerComponent as StoryblokComponent, storyblokEditable } from "@storyblok/react/rsc";
 
 interface PricingSectionProps {
   blok: {
