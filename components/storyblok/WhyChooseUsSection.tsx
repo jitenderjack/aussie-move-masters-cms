@@ -1,46 +1,68 @@
-import * as Icons from 'lucide-react';
+"use client";
 
-interface FeatureItem {
-  component: string;
-  icon: string;
-  title: string;
-  description: string;
-  _uid: string;
-}
+import { DollarSign, FileText, Truck, Clock, Shield, ThumbsUp, HeartHandshake, Award } from "lucide-react";
+import { storyblokEditable } from "@storyblok/react/rsc";
 
-interface WhyChooseUsProps {
+interface WhyChooseUsSectionProps {
   blok: {
-    heading: string;
-    features: FeatureItem[];
+    title: string;
+    subtitle: string;
+    features: Array<{
+      icon: string;
+      title: string;
+      description: string;
+      _uid: string;
+    }>;
   };
 }
 
-export default function WhyChooseUsSection({ blok }: WhyChooseUsProps) {
-  const getIcon = (iconName: string) => {
-    const IconComponent = (Icons as any)[iconName];
-    return IconComponent ? <IconComponent className="w-10 h-10" /> : null;
-  };
+const iconMap: Record<string, any> = {
+  dollar: DollarSign,
+  fileText: FileText,
+  truck: Truck,
+  clock: Clock,
+  shield: Shield,
+  thumbsUp: ThumbsUp,
+  heart: HeartHandshake,
+  award: Award,
+};
 
+export default function WhyChooseUsSection({ blok }: WhyChooseUsSectionProps) {
   return (
-    <section className="py-20 px-4 bg-white">
-      <div className="container mx-auto max-w-6xl">
-        <h2 className="text-4xl font-bold text-center text-gray-900 mb-12">
-          {blok.heading}
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {blok.features.map((feature) => (
-            <div key={feature._uid} className="text-center">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-teal-100 text-teal-600 rounded-full mb-4">
-                {getIcon(feature.icon)}
+    <section
+      {...storyblokEditable(blok)}
+      id="why-us"
+      className="py-16 lg:py-24 bg-[hsl(174,70%,28%)] text-white"
+    >
+      <div className="max-w-7xl mx-auto px-4">
+        <div className="text-center mb-12">
+          <span className="inline-block bg-[hsl(38,92%,64%)]/20 text-[hsl(38,92%,64%)] text-xs font-bold px-3 py-1 rounded-full mb-3 font-['Montserrat']">
+            WHY CHOOSE US
+          </span>
+          <h2 className="font-black text-3xl lg:text-4xl font-['Montserrat'] mb-3">
+            {blok.title}
+          </h2>
+          <div className="w-16 h-1 bg-[hsl(38,92%,64%)] mx-auto rounded-full mb-4" />
+          <p className="opacity-80 max-w-2xl mx-auto text-base">{blok.subtitle}</p>
+        </div>
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {blok.features?.map((feature) => {
+            const IconComponent = iconMap[feature.icon] || Shield;
+            return (
+              <div
+                key={feature._uid}
+                className="flex gap-3 bg-white/8 rounded-2xl p-5 border border-white/15 hover:bg-white/12 transition-colors"
+              >
+                <div className="w-10 h-10 bg-[hsl(38,92%,64%)]/20 rounded-xl flex items-center justify-center shrink-0">
+                  <IconComponent className="w-5 h-5 text-[hsl(38,92%,64%)]" />
+                </div>
+                <div>
+                  <h4 className="font-black text-sm font-['Montserrat'] mb-1">{feature.title}</h4>
+                  <p className="text-xs opacity-75 leading-relaxed">{feature.description}</p>
+                </div>
               </div>
-              <h3 className="text-lg font-bold text-gray-900 mb-2">
-                {feature.title}
-              </h3>
-              <p className="text-gray-600">
-                {feature.description}
-              </p>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>

@@ -1,50 +1,30 @@
-import { Star } from 'lucide-react';
+"use client";
 
-interface TestimonialItem {
-  component: string;
-  name: string;
-  rating: number;
-  text: string;
-  location?: string;
-  _uid: string;
-}
+import { StoryblokComponent, storyblokEditable } from "@storyblok/react/rsc";
 
-interface TestimonialsProps {
+interface TestimonialsSectionProps {
   blok: {
-    heading: string;
-    items: TestimonialItem[];
+    title: string;
+    testimonials: Array<any>;
   };
 }
 
-export default function TestimonialsSection({ blok }: TestimonialsProps) {
+export default function TestimonialsSection({ blok }: TestimonialsSectionProps) {
   return (
-    <section className="py-20 px-4 bg-gray-50">
-      <div className="container mx-auto max-w-6xl">
-        <h2 className="text-4xl font-bold text-center text-gray-900 mb-12">
-          {blok.heading}
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {blok.items.map((testimonial) => (
-            <div key={testimonial._uid} className="bg-white p-6 rounded-lg shadow-md">
-              <div className="flex gap-1 mb-4">
-                {[...Array(testimonial.rating)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
-                ))}
-              </div>
-              <p className="text-gray-700 mb-4 italic">
-                "{testimonial.text}"
-              </p>
-              <div className="border-t pt-4">
-                <p className="font-semibold text-gray-900">
-                  {testimonial.name}
-                </p>
-                {testimonial.location && (
-                  <p className="text-sm text-gray-600">
-                    {testimonial.location}
-                  </p>
-                )}
-              </div>
-            </div>
+    <section {...storyblokEditable(blok)} className="py-16 lg:py-24 bg-gray-100">
+      <div className="max-w-5xl mx-auto px-4">
+        <div className="text-center mb-12">
+          <span className="inline-block bg-[hsl(38,92%,64%)]/10 text-[hsl(38,92%,64%)] text-xs font-bold px-3 py-1 rounded-full mb-3 font-['Montserrat']">
+            REVIEWS
+          </span>
+          <h2 className="font-black text-3xl lg:text-4xl text-gray-900 font-['Montserrat'] mb-3">
+            {blok.title}
+          </h2>
+          <div className="w-16 h-1 bg-[hsl(38,92%,64%)] mx-auto rounded-full mb-4" />
+        </div>
+        <div className="grid md:grid-cols-3 gap-6">
+          {blok.testimonials?.map((testimonial) => (
+            <StoryblokComponent blok={testimonial} key={testimonial._uid} />
           ))}
         </div>
       </div>
