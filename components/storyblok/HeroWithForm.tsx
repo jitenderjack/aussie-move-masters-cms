@@ -196,9 +196,9 @@ export default function HeroWithForm({ blok }: HeroWithFormProps) {
 
           {/* Trust badges */}
           <div className="flex flex-wrap gap-2.5 justify-center lg:justify-start">
-            {badges.map((badge) => (
+            {badges.map((badge, index) => (
               <div
-                key={badge._uid || badge.label}
+                key={('_uid' in badge ? badge._uid : `badge-${index}`) as string}
                 className="flex items-center gap-1.5 bg-white/10 backdrop-blur border border-white/20 text-white text-xs font-semibold px-3 py-1.5 rounded-full"
               >
                 <CheckCircle className="w-3.5 h-3.5 text-[hsl(38,92%,64%)]" /> {badge.label}
