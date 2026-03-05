@@ -1,12 +1,15 @@
 import TopBar from "./TopBar";
 import Header from "./Header";
 import HeroSection from "./HeroSection";
+import HeroWithForm from "./HeroWithForm";
 import AboutSection from "./AboutSection";
 import ServicesSection from "./ServicesSection";
+import EnhancedServices from "./EnhancedServices";
 import ServiceCard from "./ServiceCard";
 import WhyChooseUsSection from "./WhyChooseUsSection";
 import HowItWorksSection from "./HowItWorksSection";
 import PricingSection from "./PricingSection";
+import EnhancedPricing from "./EnhancedPricing";
 import PricingCard from "./PricingCard";
 import TestimonialsSection from "./TestimonialsSection";
 import TestimonialCard from "./TestimonialCard";
@@ -15,17 +18,21 @@ import FAQItem from "./FAQItem";
 import StorySection from "./StorySection";
 import ContactSection from "./ContactSection";
 import Footer from "./Footer";
+import EnhancedFooter from "./EnhancedFooter";
 
 export const components = {
   top_bar: TopBar,
   header: Header,
   hero_section: HeroSection,
+  hero_with_form: HeroWithForm,
   about_section: AboutSection,
   services_section: ServicesSection,
+  enhanced_services: EnhancedServices,
   service_card: ServiceCard,
   why_choose_us_section: WhyChooseUsSection,
   how_it_works_section: HowItWorksSection,
   pricing_section: PricingSection,
+  enhanced_pricing: EnhancedPricing,
   pricing_card: PricingCard,
   testimonials_section: TestimonialsSection,
   testimonial_card: TestimonialCard,
@@ -34,4 +41,5 @@ export const components = {
   story_section: StorySection,
   contact_section: ContactSection,
   footer: Footer,
+  enhanced_footer: EnhancedFooter,
 };
