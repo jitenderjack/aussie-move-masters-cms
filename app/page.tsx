@@ -3,7 +3,7 @@ import { components as Components } from '@/components/storyblok';
 
 export default async function Home() {
   try {
-    const story = await fetchStory('home');
+    const story = await fetchStory('home', 'draft');
     const sections = story.content.body || [];
 
     return (
