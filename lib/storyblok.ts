@@ -7,6 +7,7 @@ const storyblokApi = new StoryblokClient({
 export async function fetchStory(slug: string, version: 'draft' | 'published' = 'draft') {
   const { data } = await storyblokApi.get(`cdn/stories/${slug}`, {
     version,
+    cv: Date.now(), // Cache bust
   });
   
   return data.story;

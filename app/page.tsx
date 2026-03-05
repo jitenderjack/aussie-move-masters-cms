@@ -6,6 +6,8 @@ export default async function Home() {
     const story = await fetchStory('home', 'draft');
     const sections = story.content.body || [];
 
+    console.log('✅ Story loaded, sections:', sections.length);
+
     return (
       <main className="min-h-screen">
         {sections.map((section: any) => {
@@ -21,6 +23,7 @@ export default async function Home() {
       </main>
     );
   } catch (error) {
+    console.error('❌ Error loading story:', error);
     // Fallback when story doesn't exist yet
     return (
       <main className="min-h-screen flex items-center justify-center bg-gray-50 p-8">
