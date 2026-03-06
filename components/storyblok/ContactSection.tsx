@@ -6,14 +6,12 @@ import { storyblokEditable } from "@storyblok/react/rsc";
 
 interface ContactSectionProps {
   blok: {
-    title: string;
-    subtitle: string;
+    heading?: string;
+    subheading?: string;
     phone: string;
     email: string;
     address: string;
-    phone_label: string;
-    form_title: string;
-    suburbs?: Array<string>;
+    hours?: string;
   };
 }
 
@@ -78,10 +76,10 @@ export default function ContactSection({ blok }: ContactSectionProps) {
             GET IN TOUCH
           </span>
           <h2 className="font-black text-3xl lg:text-4xl font-['Montserrat'] mb-3">
-            {blok.title}
+            {blok.heading || 'Get Your Free Quote Today'}
           </h2>
           <div className="w-16 h-1 bg-[hsl(38,92%,64%)] mx-auto rounded-full mb-4" />
-          <p className="opacity-80 max-w-xl mx-auto">{blok.subtitle}</p>
+          <p className="opacity-80 max-w-xl mx-auto">{blok.subheading}</p>
         </div>
         <div className="grid lg:grid-cols-5 gap-8 items-start">
           {/* Left: contact info */}
@@ -92,7 +90,7 @@ export default function ContactSection({ blok }: ContactSectionProps) {
               </div>
               <div>
                 <p className="font-bold font-['Montserrat'] text-sm mb-0.5">
-                  {blok.phone_label}
+                  Call Us Now
                 </p>
                 <a
                   href={`tel:${blok.phone.replace(/\s/g, "")}`}
@@ -100,7 +98,7 @@ export default function ContactSection({ blok }: ContactSectionProps) {
                 >
                   {blok.phone}
                 </a>
-                <p className="text-xs opacity-60 mt-0.5">7 days · 7am – 7pm</p>
+                <p className="text-xs opacity-60 mt-0.5">{blok.hours || '7 days · 7am – 7pm'}</p>
               </div>
             </div>
             <div className="flex items-start gap-4">
@@ -146,7 +144,7 @@ export default function ContactSection({ blok }: ContactSectionProps) {
           {/* Right: Form */}
           <div className="lg:col-span-3 bg-white rounded-2xl p-6 lg:p-8 shadow-2xl">
             <h3 className="font-black text-gray-900 text-xl font-['Montserrat'] mb-5">
-              {blok.form_title}
+              Request Your Free Quote
             </h3>
             {submitted ? (
               <div className="flex flex-col items-center justify-center py-10 gap-3">

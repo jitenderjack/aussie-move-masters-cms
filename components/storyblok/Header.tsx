@@ -6,10 +6,9 @@ import { storyblokEditable } from "@storyblok/react/rsc";
 
 interface HeaderProps {
   blok: {
-    logo_text_top: string;
-    logo_text_bottom: string;
+    logo_text?: string;
     phone: string;
-    nav_items: Array<{
+    nav_links?: Array<{
       label: string;
       href: string;
       _uid: string;
@@ -37,17 +36,17 @@ export default function Header({ blok }: HeaderProps) {
           </div>
           <div className="font-['Montserrat']">
             <div className="font-black text-base leading-none text-[hsl(174,70%,28%)]">
-              {blok.logo_text_top}
+              {blok.logo_text?.split(' ')[0] || 'AUSSIE'}
             </div>
             <div className="font-bold text-[10px] tracking-widest text-[hsl(38,92%,64%)] leading-none">
-              {blok.logo_text_bottom}
+              {blok.logo_text?.split(' ').slice(1).join(' ') || 'MOVE MASTERS'}
             </div>
           </div>
         </button>
 
         {/* Desktop nav */}
         <nav className="hidden lg:flex items-center gap-1">
-          {blok.nav_items?.map((item) => (
+          {blok.nav_links?.map((item) => (
             <button
               key={item._uid}
               onClick={() => scrollTo(item.href)}
@@ -79,7 +78,7 @@ export default function Header({ blok }: HeaderProps) {
       {/* Mobile menu */}
       {menuOpen && (
         <div className="lg:hidden border-t border-gray-200 bg-white px-4 py-3 space-y-1">
-          {blok.nav_items?.map((item) => (
+          {blok.nav_links?.map((item) => (
             <button
               key={item._uid}
               onClick={() => {

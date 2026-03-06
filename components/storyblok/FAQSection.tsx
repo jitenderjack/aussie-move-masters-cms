@@ -4,8 +4,8 @@ import { StoryblokServerComponent as StoryblokComponent, storyblokEditable } fro
 
 interface FAQSectionProps {
   blok: {
-    title: string;
-    items: Array<any>;
+    heading?: string;
+    faqs?: Array<any>;
   };
 }
 
@@ -18,12 +18,12 @@ export default function FAQSection({ blok }: FAQSectionProps) {
             FAQ
           </span>
           <h2 className="font-black text-3xl lg:text-4xl text-gray-900 font-['Montserrat'] mb-3">
-            {blok.title}
+            {blok.heading || 'Frequently Asked Questions'}
           </h2>
           <div className="w-16 h-1 bg-[hsl(38,92%,64%)] mx-auto rounded-full mb-4" />
         </div>
         <div className="space-y-3">
-          {blok.items?.map((item) => (
+          {blok.faqs?.map((item) => (
             <StoryblokComponent blok={item} key={item._uid} />
           ))}
         </div>
