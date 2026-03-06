@@ -4,11 +4,12 @@
 @layer base {
   :root {
     /* Aussie Move Masters Brand Colors */
-    --primary: 174 70% 28%; /* Teal */
-    --primary-dark: 174 70% 22%;
-    --accent: 38 92% 64%; /* Gold/Orange */
-    --accent-hover: 38 92% 58%;
-    --topbar: 174 70% 8%; /* Dark teal */
+    --primary: 174 65% 28%; /* Teal #1a7a6e */
+    --primary-light: 174 55% 38%;
+    --primary-dark: 174 70% 18%;
+    --accent: 37 91% 55%; /* Amber/Orange #F5A623 */
+    --accent-hover: 37 91% 48%;
+    --topbar: 174 65% 20%; /* Dark teal */
     
     --background: 0 0% 100%;
     --foreground: 0 0% 10%;

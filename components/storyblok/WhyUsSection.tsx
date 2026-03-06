@@ -3,7 +3,7 @@ import WhyUsFeature from './WhyUsFeature';
 
 export default function WhyUsSection({ blok }: any) {
   return (
-    <section id="why-us" className="py-16 lg:py-24 bg-[hsl(174,70%,28%)] text-white">
+    <section id="why-us" className="py-16 lg:py-24 bg-[hsl(174,65%,28%)] text-white">
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="font-black text-3xl lg:text-4xl mb-3">{blok.title}</h2>

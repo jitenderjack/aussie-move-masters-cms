@@ -26,12 +26,12 @@ export default function PricingCard({ blok }: PricingCardProps) {
       {...storyblokEditable(blok)}
       className={`relative rounded-2xl p-6 border-2 flex flex-col transition-all hover:-translate-y-1 hover:shadow-xl ${
         blok.popular
-          ? "border-[hsl(38,92%,64%)] bg-[hsl(38,92%,64%)]/5 shadow-lg"
+          ? "border-[hsl(37,91%,55%)] bg-[hsl(37,91%,55%)]/5 shadow-lg"
           : "border-gray-200 bg-white shadow-sm"
       }`}
     >
       {blok.popular && (
-        <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[hsl(38,92%,64%)] text-gray-900 text-xs font-black px-4 py-1 rounded-full font-['Montserrat'] shadow">
+        <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[hsl(37,91%,55%)] text-gray-900 text-xs font-black px-4 py-1 rounded-full font-['Montserrat'] shadow">
           BEST VALUE
         </div>
       )}
@@ -45,7 +45,7 @@ export default function PricingCard({ blok }: PricingCardProps) {
       <div className="flex items-end gap-1 mb-5">
         <span
           className={`font-black text-4xl font-['Montserrat'] ${
-            blok.popular ? "text-[hsl(38,92%,64%)]" : "text-[hsl(174,70%,28%)]"
+            blok.popular ? "text-[hsl(37,91%,55%)]" : "text-[hsl(174,65%,28%)]"
           }`}
         >
           {blok.price}
@@ -63,8 +63,8 @@ export default function PricingCard({ blok }: PricingCardProps) {
         onClick={() => scrollTo("contact")}
         className={`w-full py-3 rounded-xl font-black text-sm font-['Montserrat'] transition-all hover:scale-[1.02] ${
           blok.popular
-            ? "bg-[hsl(38,92%,64%)] text-gray-900 hover:bg-[hsl(38,92%,58%)] shadow-md"
-            : "bg-[hsl(174,70%,28%)] text-white hover:bg-[hsl(174,70%,22%)]"
+            ? "bg-[hsl(37,91%,55%)] text-gray-900 hover:bg-[hsl(37,91%,48%)] shadow-md"
+            : "bg-[hsl(174,65%,28%)] text-white hover:bg-[hsl(174,70%,18%)]"
         }`}
       >
         Get a Quote

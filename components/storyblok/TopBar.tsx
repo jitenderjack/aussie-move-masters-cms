@@ -11,18 +11,18 @@ interface TopBarProps {
 
 export default function TopBar({ blok }: TopBarProps) {
   return (
-    <div className="bg-[hsl(174,70%,8%)] text-white py-2 px-4 text-xs">
+    <div className="bg-[hsl(174,65%,20%)] text-white py-2 px-4 text-xs">
       <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
         <div className="flex items-center gap-5">
           <a 
             href={`tel:${blok.phone.replace(/\s/g, '')}`}
-            className="flex items-center gap-1.5 hover:text-[hsl(38,92%,64%)] transition-colors font-semibold"
+            className="flex items-center gap-1.5 hover:text-[hsl(37,91%,55%)] transition-colors font-semibold"
           >
             <Phone className="w-3 h-3" /> {blok.phone}
           </a>
           <a 
             href={`mailto:${blok.email}`}
-            className="hidden sm:flex items-center gap-1.5 hover:text-[hsl(38,92%,64%)] transition-colors"
+            className="hidden sm:flex items-center gap-1.5 hover:text-[hsl(37,91%,55%)] transition-colors"
           >
             <Mail className="w-3 h-3" /> {blok.email}
           </a>

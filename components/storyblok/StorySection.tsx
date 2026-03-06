@@ -39,13 +39,13 @@ export default function StorySection({ blok }: StorySectionProps) {
     >
       <div className="max-w-5xl mx-auto px-4">
         <div className="text-center mb-12">
-          <span className="inline-block bg-[hsl(38,92%,64%)]/10 text-[hsl(38,92%,64%)] text-xs font-bold px-3 py-1 rounded-full mb-3 font-['Montserrat']">
+          <span className="inline-block bg-[hsl(37,91%,55%)]/10 text-[hsl(37,91%,55%)] text-xs font-bold px-3 py-1 rounded-full mb-3 font-['Montserrat']">
             OUR STORY
           </span>
           <h2 className="font-black text-3xl lg:text-4xl text-gray-900 font-['Montserrat'] mb-3">
             {blok.title}
           </h2>
-          <div className="w-16 h-1 bg-[hsl(38,92%,64%)] mx-auto rounded-full mb-4" />
+          <div className="w-16 h-1 bg-[hsl(37,91%,55%)] mx-auto rounded-full mb-4" />
           <p className="text-gray-600 max-w-2xl mx-auto text-base">{blok.subtitle}</p>
         </div>
         <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -55,7 +55,7 @@ export default function StorySection({ blok }: StorySectionProps) {
             <p dangerouslySetInnerHTML={{ __html: blok.paragraph_3 }} />
             <button
               onClick={() => scrollTo("contact")}
-              className="inline-flex items-center gap-2 bg-[hsl(174,70%,28%)] text-white font-black px-6 py-3 rounded-full hover:bg-[hsl(174,70%,22%)] transition-all font-['Montserrat'] text-sm mt-2"
+              className="inline-flex items-center gap-2 bg-[hsl(174,65%,28%)] text-white font-black px-6 py-3 rounded-full hover:bg-[hsl(174,70%,18%)] transition-all font-['Montserrat'] text-sm mt-2"
             >
               {blok.cta_text} <ArrowRight className="w-4 h-4" />
             </button>
@@ -68,8 +68,8 @@ export default function StorySection({ blok }: StorySectionProps) {
                   key={feature._uid}
                   className="bg-white rounded-2xl p-5 border border-gray-200 shadow-sm"
                 >
-                  <div className="w-10 h-10 bg-[hsl(38,92%,64%)]/10 rounded-xl flex items-center justify-center mb-3">
-                    <IconComponent className="w-5 h-5 text-[hsl(38,92%,64%)]" />
+                  <div className="w-10 h-10 bg-[hsl(37,91%,55%)]/10 rounded-xl flex items-center justify-center mb-3">
+                    <IconComponent className="w-5 h-5 text-[hsl(37,91%,55%)]" />
                   </div>
                   <h4 className="font-bold text-sm font-['Montserrat'] mb-1">{feature.title}</h4>
                   <p className="text-xs text-gray-600 leading-relaxed">{feature.description}</p>

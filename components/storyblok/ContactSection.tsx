@@ -68,17 +68,17 @@ export default function ContactSection({ blok }: ContactSectionProps) {
     <section
       {...storyblokEditable(blok)}
       id="contact"
-      className="py-16 lg:py-24 bg-[hsl(174,70%,28%)] text-white"
+      className="py-16 lg:py-24 bg-[hsl(174,65%,28%)] text-white"
     >
       <div className="max-w-6xl mx-auto px-4">
         <div className="text-center mb-10">
-          <span className="inline-block bg-[hsl(38,92%,64%)]/20 text-[hsl(38,92%,64%)] text-xs font-bold px-3 py-1 rounded-full mb-3 font-['Montserrat']">
+          <span className="inline-block bg-[hsl(37,91%,55%)]/20 text-[hsl(37,91%,55%)] text-xs font-bold px-3 py-1 rounded-full mb-3 font-['Montserrat']">
             GET IN TOUCH
           </span>
           <h2 className="font-black text-3xl lg:text-4xl font-['Montserrat'] mb-3">
             {blok.heading || 'Get Your Free Quote Today'}
           </h2>
-          <div className="w-16 h-1 bg-[hsl(38,92%,64%)] mx-auto rounded-full mb-4" />
+          <div className="w-16 h-1 bg-[hsl(37,91%,55%)] mx-auto rounded-full mb-4" />
           <p className="opacity-80 max-w-xl mx-auto">{blok.subheading}</p>
         </div>
         <div className="grid lg:grid-cols-5 gap-8 items-start">
@@ -86,7 +86,7 @@ export default function ContactSection({ blok }: ContactSectionProps) {
           <div className="lg:col-span-2 space-y-5">
             <div className="flex items-start gap-4">
               <div className="w-11 h-11 bg-white/15 rounded-xl flex items-center justify-center shrink-0">
-                <Phone className="w-5 h-5 text-[hsl(38,92%,64%)]" />
+                <Phone className="w-5 h-5 text-[hsl(37,91%,55%)]" />
               </div>
               <div>
                 <p className="font-bold font-['Montserrat'] text-sm mb-0.5">
@@ -94,7 +94,7 @@ export default function ContactSection({ blok }: ContactSectionProps) {
                 </p>
                 <a
                   href={`tel:${blok.phone.replace(/\s/g, "")}`}
-                  className="text-2xl font-black font-['Montserrat'] text-[hsl(38,92%,64%)] hover:opacity-80 transition-opacity"
+                  className="text-2xl font-black font-['Montserrat'] text-[hsl(37,91%,55%)] hover:opacity-80 transition-opacity"
                 >
                   {blok.phone}
                 </a>
@@ -103,7 +103,7 @@ export default function ContactSection({ blok }: ContactSectionProps) {
             </div>
             <div className="flex items-start gap-4">
               <div className="w-11 h-11 bg-white/15 rounded-xl flex items-center justify-center shrink-0">
-                <Mail className="w-5 h-5 text-[hsl(38,92%,64%)]" />
+                <Mail className="w-5 h-5 text-[hsl(37,91%,55%)]" />
               </div>
               <div>
                 <p className="font-bold font-['Montserrat'] text-sm mb-0.5">Email Us</p>
@@ -117,7 +117,7 @@ export default function ContactSection({ blok }: ContactSectionProps) {
             </div>
             <div className="flex items-start gap-4">
               <div className="w-11 h-11 bg-white/15 rounded-xl flex items-center justify-center shrink-0">
-                <MapPin className="w-5 h-5 text-[hsl(38,92%,64%)]" />
+                <MapPin className="w-5 h-5 text-[hsl(37,91%,55%)]" />
               </div>
               <div>
                 <p className="font-bold font-['Montserrat'] text-sm mb-0.5">Location</p>
@@ -148,7 +148,7 @@ export default function ContactSection({ blok }: ContactSectionProps) {
             </h3>
             {submitted ? (
               <div className="flex flex-col items-center justify-center py-10 gap-3">
-                <CheckCircle className="w-14 h-14 text-[hsl(174,70%,28%)]" />
+                <CheckCircle className="w-14 h-14 text-[hsl(174,65%,28%)]" />
                 <p className="font-black text-gray-900 text-center font-['Montserrat'] text-lg">
                   Quote request received!
                 </p>
@@ -219,7 +219,7 @@ export default function ContactSection({ blok }: ContactSectionProps) {
                 />
                 <button
                   type="submit"
-                  className="w-full flex items-center justify-center gap-2 bg-[hsl(38,92%,64%)] text-gray-900 font-black py-3.5 rounded-xl hover:bg-[hsl(38,92%,58%)] transition-all text-sm shadow-lg hover:shadow-xl hover:scale-[1.02] font-['Montserrat']"
+                  className="w-full flex items-center justify-center gap-2 bg-[hsl(37,91%,55%)] text-gray-900 font-black py-3.5 rounded-xl hover:bg-[hsl(37,91%,48%)] transition-all text-sm shadow-lg hover:shadow-xl hover:scale-[1.02] font-['Montserrat']"
                 >
                   <Send className="w-4 h-4" />
                   GET MY FREE QUOTE

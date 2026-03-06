@@ -21,11 +21,11 @@ export default function FAQItem({ blok }: FAQItemProps) {
     >
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="w-full flex items-center justify-between px-6 py-4 text-left font-bold text-sm font-['Montserrat'] hover:text-[hsl(174,70%,28%)] transition-colors"
+        className="w-full flex items-center justify-between px-6 py-4 text-left font-bold text-sm font-['Montserrat'] hover:text-[hsl(174,65%,28%)] transition-colors"
       >
         {blok.question}
         {isOpen ? (
-          <ChevronUp className="w-4 h-4 text-[hsl(174,70%,28%)] shrink-0" />
+          <ChevronUp className="w-4 h-4 text-[hsl(174,65%,28%)] shrink-0" />
         ) : (
           <ChevronDown className="w-4 h-4 text-gray-600 shrink-0" />
         )}

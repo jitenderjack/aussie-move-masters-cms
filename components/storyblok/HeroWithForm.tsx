@@ -39,7 +39,7 @@ export default function HeroWithForm({ blok }: HeroWithFormProps) {
   };
 
   const inputCls =
-    "w-full border border-gray-300 rounded-lg px-3 py-2.5 text-sm text-gray-900 bg-white placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-[hsl(174,70%,28%)] focus:border-transparent transition-all";
+    "w-full border border-gray-300 rounded-lg px-3 py-2.5 text-sm text-gray-900 bg-white placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-[hsl(174,65%,28%)] focus:border-transparent transition-all";
 
   const defaultBadges = [
     { icon: "Shield", label: "Fully Insured" },
@@ -76,7 +76,7 @@ export default function HeroWithForm({ blok }: HeroWithFormProps) {
         <div className="w-full lg:w-[420px] xl:w-[450px] shrink-0">
           <div className="bg-white rounded-2xl shadow-2xl border border-gray-200 p-6 lg:p-7">
             <div className="text-center mb-5">
-              <div className="inline-block bg-[hsl(38,92%,64%)]/10 text-[hsl(38,92%,64%)] text-xs font-black px-3 py-1 rounded-full mb-2">
+              <div className="inline-block bg-[hsl(37,91%,55%)]/10 text-[hsl(37,91%,55%)] text-xs font-black px-3 py-1 rounded-full mb-2">
                 FREE — NO OBLIGATION
               </div>
               <h2 className="font-black text-gray-900 text-xl">Request a Free Quote</h2>
@@ -87,7 +87,7 @@ export default function HeroWithForm({ blok }: HeroWithFormProps) {
             <div className="flex gap-2 mb-4">
               <a
                 href={`tel:${blok.phone.replace(/\s/g, '')}`}
-                className="flex-1 flex items-center justify-center gap-1.5 bg-[hsl(174,70%,28%)] text-white font-bold py-2.5 rounded-lg text-xs hover:bg-[hsl(174,70%,22%)] transition-colors"
+                className="flex-1 flex items-center justify-center gap-1.5 bg-[hsl(174,65%,28%)] text-white font-bold py-2.5 rounded-lg text-xs hover:bg-[hsl(174,70%,18%)] transition-colors"
               >
                 <Phone className="w-3.5 h-3.5" /> {blok.phone}
               </a>
@@ -110,7 +110,7 @@ export default function HeroWithForm({ blok }: HeroWithFormProps) {
 
             {submitted ? (
               <div className="flex flex-col items-center justify-center py-10 gap-3">
-                <CheckCircle className="w-14 h-14 text-[hsl(174,70%,28%)]" />
+                <CheckCircle className="w-14 h-14 text-[hsl(174,65%,28%)]" />
                 <p className="font-black text-gray-900 text-center text-lg">Quote request received!</p>
                 <p className="text-gray-600 text-sm text-center">We'll call you back within 30 minutes.</p>
               </div>
@@ -169,7 +169,7 @@ export default function HeroWithForm({ blok }: HeroWithFormProps) {
                 />
                 <button
                   type="submit"
-                  className="w-full flex items-center justify-center gap-2 bg-[hsl(38,92%,64%)] text-gray-900 font-black py-3.5 rounded-xl hover:bg-[hsl(38,92%,58%)] transition-all text-sm shadow-lg hover:shadow-xl hover:scale-[1.02]"
+                  className="w-full flex items-center justify-center gap-2 bg-[hsl(37,91%,55%)] text-gray-900 font-black py-3.5 rounded-xl hover:bg-[hsl(37,91%,48%)] transition-all text-sm shadow-lg hover:shadow-xl hover:scale-[1.02]"
                 >
                   <Send className="w-4 h-4" />
                   GET MY FREE QUOTE
@@ -182,7 +182,7 @@ export default function HeroWithForm({ blok }: HeroWithFormProps) {
 
         {/* RIGHT — Headline */}
         <div className="flex-1 text-white order-first lg:order-last text-center lg:text-left">
-          <div className="inline-flex items-center gap-2 bg-[hsl(38,92%,64%)]/20 border border-[hsl(38,92%,64%)]/40 text-[hsl(38,92%,64%)] text-xs font-bold px-3 py-1 rounded-full mb-5">
+          <div className="inline-flex items-center gap-2 bg-[hsl(37,91%,55%)]/20 border border-[hsl(37,91%,55%)]/40 text-[hsl(37,91%,55%)] text-xs font-bold px-3 py-1 rounded-full mb-5">
             <Star className="w-3 h-3 fill-current" /> Perth's Trusted Removalists
           </div>
           <h1
@@ -201,7 +201,7 @@ export default function HeroWithForm({ blok }: HeroWithFormProps) {
                 key={('_uid' in badge ? badge._uid : `badge-${index}`) as string}
                 className="flex items-center gap-1.5 bg-white/10 backdrop-blur border border-white/20 text-white text-xs font-semibold px-3 py-1.5 rounded-full"
               >
-                <CheckCircle className="w-3.5 h-3.5 text-[hsl(38,92%,64%)]" /> {badge.label}
+                <CheckCircle className="w-3.5 h-3.5 text-[hsl(37,91%,55%)]" /> {badge.label}
               </div>
             ))}
           </div>
